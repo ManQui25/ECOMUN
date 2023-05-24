@@ -1,4 +1,4 @@
-package abstractas;
+package clases;
 
 public abstract class Entidad {
 
@@ -10,12 +10,8 @@ public abstract class Entidad {
 	}
 	
 	public String getNombre() {
-		if (this._nombre != null) {
-			return this._nombre;
-		}
-		else {
-			return new String("!");
-		}
+		return ((this._nombre != null) ? 
+				(this._nombre) : (new String("!")));
 	}
 	
 	
@@ -26,11 +22,7 @@ public abstract class Entidad {
 	}
 	
 	public String getTel() {
-		if (this._telContacto != null) {
-			return this._telContacto;
-		}
-		else {
-			return new String("!");
-		}
+		return ((this._telContacto != null) ? 
+				(this._telContacto) : (new String("!")));
 	}
 }
