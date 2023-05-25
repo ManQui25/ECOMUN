@@ -1,5 +1,4 @@
 package clases;
-import java.util.ArrayList;
 
 public class Producto {
 
@@ -12,13 +11,18 @@ public class Producto {
 	
 	
 	
-	public Producto(int peso, String nombre, String categoria){
+	public Producto(int peso, String nombre, String categoria, int precio){
 		this._peso = peso;
 		this._nombre = nombre;
 		this._categoria = categoria;
+		this._precio = precio;
+		
 	}
 
 
+	public void set_disponibilidad(int dispo) {
+		this._disponibilidad = dispo;
+	}
 	public int get_disponibilidad() {
 		return this._disponibilidad;
 	}
