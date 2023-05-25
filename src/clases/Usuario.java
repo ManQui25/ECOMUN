@@ -60,7 +60,12 @@ public class Usuario extends Entidad{
 	
 	
 	
-	public void setRegion(Region region) {
+	public final void setRegion(Region region) {
 		this._region = region;
+	}
+	
+	public Usuario(	) {
+		
+		Entidad._cantidadUsuarios++;
 	}
 }

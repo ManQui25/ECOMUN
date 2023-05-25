@@ -4,6 +4,7 @@ public abstract class Entidad {
 
 	String _nombre;
 	String _telContacto;
+	static int _cantidadUsuarios = 0;
 	
 	public void setNombre(String nombre) {
 		this._nombre = nombre;
