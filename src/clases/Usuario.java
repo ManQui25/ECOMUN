@@ -36,26 +36,26 @@ public class Usuario extends Entidad{
 		this._listaProductos.add(producto);
 	}
 	
-	public void addToLista(Producto p1, Producto p2) {
-		this._listaProductos.add(p1);
-		this._listaProductos.add(p2);
-	}
-	
-	public void addToLista(Producto p1, Producto p2, Producto p3) {
-		this._listaProductos.add(p1);
-		this._listaProductos.add(p2);
-		this._listaProductos.add(p3);
-	}
-	
-	
 	public Boolean rmFromLista(Producto p) {
-		Boolean valor = this._listaProductos.remove(p);
-		return valor;
+		try {
+			this._listaProductos.remove(p);
+			return true;
+		}
+		catch (IndexOutOfBoundsException ex) {
+			System.out.println("Fuera de limite!");
+			return false;
+		}
 	}
 	
 	public Boolean rmFromLista(int indice) {
-		Boolean valor = this._listaProductos.remove(indice);
-		return valor;
+		try {
+			this._listaProductos.remove(indice);
+			return true;
+		}
+		catch (IndexOutOfBoundsException ex) {
+			System.out.println("Fuera de limite!");
+			return false;
+		}
 	}
 	
 	
